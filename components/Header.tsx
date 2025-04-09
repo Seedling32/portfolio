@@ -18,7 +18,7 @@ const Header = () => {
         Hi! I&apos;m David Graham
       </h1>
       <h2 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
-        aspiring full-stack developer in Asheville, NC
+        Aspiring full-stack developer in Asheville, NC
       </h2>
       <p className="max-w-2xl font-Ovo">
         As a passionate and driven web developer with a background in
