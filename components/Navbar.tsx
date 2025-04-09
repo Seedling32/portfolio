@@ -24,9 +24,14 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-[url(../assets/header-bg-color.png)] bg-center bg-cover">
-        <nav className="flex justify-between items-center max-w-7xl mx-auto py-4 px-8 bg-gradient-to-t from-background to-transparent">
+        <nav className="flex justify-between items-center py-4 px-8 bg-gradient-to-t from-background to-transparent">
           <Link href="#top">
-            <Image src={assets.logo} alt="David Graham logo." width={200} />
+            <Image
+              src={assets.logo_brand}
+              alt="David Graham logo."
+              width={100}
+              className="rounded-lg"
+            />
           </Link>
           <ul className="font-Ovo capitalize hidden md:flex gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm bg-background/50">
             {navList.map((link) => (
