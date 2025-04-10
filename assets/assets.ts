@@ -36,8 +36,16 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import logo_brand from './logo-brand.svg';
+import github_black from './github-mark.svg';
+import github_white from './github-mark-white.svg';
+import in_black from './InBug-Black.png';
+import in_white from './InBug-White.png';
 
 export const assets = {
+  github_black,
+  github_white,
+  in_black,
+  in_white,
   user_image,
   code_icon,
   code_icon_dark,

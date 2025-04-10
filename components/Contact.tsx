@@ -52,14 +52,14 @@ const Contact = () => {
             name="name"
             placeholder="Enter your name..."
             required
-            className="p-3 outline-none border border-gray-500 rounded-md bg-background"
+            className="p-3 outline-none border border-gray-500 rounded-md bg-background focus:bg-amber-200/20"
           />
           <input
             type="email"
             name="email"
             placeholder="Enter your email..."
             required
-            className="p-3 outline-none border border-gray-500 rounded-md bg-background"
+            className="p-3 outline-none border border-gray-500 rounded-md bg-background focus:bg-amber-200/20"
           />
         </div>
         <textarea
@@ -67,11 +67,11 @@ const Contact = () => {
           rows={6}
           placeholder="Enter your message..."
           required
-          className="w-full p-3 outline-none border border-gray-500 rounded-md bg-background mb-6"
+          className="w-full p-3 outline-none border border-gray-500 rounded-md bg-background mb-6 focus:bg-amber-200/20"
         ></textarea>
         <button
           type="submit"
-          className="flex items-center gap-2 bg-foreground text-background px-5 py-3 rounded-full hover:shadow-[4px_4px_4px_#333] duration-300 cursor-pointer"
+          className="flex items-center gap-2 bg-foreground text-background px-5 py-3 rounded-full hover:shadow-[4px_4px_10px_#333] duration-300 cursor-pointer"
         >
           {result === '' ? 'Send message' : result}
           <Image
