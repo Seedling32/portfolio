@@ -38,7 +38,8 @@ const Header = () => {
           />
         </Link>
         <Link
-          href="/sample-resume.pdf"
+          target="_blank"
+          href="/DavidG_resume.pdf"
           download={true}
           className="px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2"
         >

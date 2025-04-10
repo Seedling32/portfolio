@@ -47,22 +47,30 @@ const Contact = () => {
       </p>
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div className="flex flex-col md:flex-row gap-10 mt-10 mb-8">
+          <label htmlFor="name" className="sr-only">
+            Name
+          </label>
           <input
             type="text"
+            id="name"
             name="name"
             placeholder="Enter your name..."
             required
             className="p-3 outline-none border border-gray-500 rounded-md bg-background focus:bg-amber-200/20"
           />
+          <label htmlFor="email">Email</label>
           <input
             type="email"
+            id="email"
             name="email"
             placeholder="Enter your email..."
             required
             className="p-3 outline-none border border-gray-500 rounded-md bg-background focus:bg-amber-200/20"
           />
         </div>
+        <label htmlFor="message">Message</label>
         <textarea
+          id="message"
           name="message"
           rows={6}
           placeholder="Enter your message..."
