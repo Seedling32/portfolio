@@ -3,12 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { assets } from '@/assets/assets';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const navList = ['home', 'about', 'projects', 'contact'];
 
 const Navbar = () => {
   const sideMenuRef = useRef<HTMLUListElement>(null);
+  const [isScroll, setIsScroll] = useState(false);
 
   const openMenu = () => {
     if (sideMenuRef.current) {
@@ -20,6 +21,16 @@ const Navbar = () => {
       sideMenuRef.current.style.transform = 'translateX(16rem)';
     }
   };
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -39,7 +50,11 @@ const Navbar = () => {
             className="rounded-lg"
           />
         </Link>
-        <ul className="font-Ovo capitalize hidden md:flex gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm bg-background/50 ml-20">
+        <ul
+          className={`font-Ovo capitalize hidden md:flex gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm bg-background/50 ml-20 ${
+            isScroll ? `backdrop-blur-lg` : ``
+          }`}
+        >
           {navList.map((link) => (
             <li key={link}>
               <Link href={`#${link}`}>{link}</Link>

@@ -3,7 +3,10 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div
+      id="about"
+      className="w-full px-[12%] py-10 h-screen scroll-mt-24 mb-20"
+    >
       <h2 className="text-center text-lg font-Ovo mb-2">Introduction</h2>
       <h3 className="text-center text-5xl font-Ovo">About me</h3>
       <div className="flex flex-col lg:flex-row items-center gap-20 my-20">
@@ -43,7 +46,7 @@ const About = () => {
             ))}
           </ul>
           <h4 className="my-6 font-Ovo">Tools I use</h4>
-          <ul className="flex items-center gap-3 sm:gap-5">
+          <ul className="flex items-center justify-between gap-3 sm:gap-5">
             {toolsData.map((tool, index) => (
               <li
                 key={index}
