@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { assets } from '@/assets/assets';
 import { useEffect, useRef, useState } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 const navList = ['home', 'about', 'projects', 'contact'];
 
@@ -78,14 +79,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
           </button>
           <Link
             href="#contact"
-            className="hidden md:flex items-center gap-3 px-10 py-2 border border-gray-500 rounded-full bg-foreground text-background"
+            className="hidden md:flex items-center gap-2 px-3 py-2 border border-gray-500 rounded-full bg-foreground text-background"
           >
             Contact
-            <Image
-              src={assets.arrow_icon}
-              alt="Arrow icon."
-              className="w-3 h-3"
-            />
+            <ArrowUpRight />
           </Link>
           <button className="block md:hidden" onClick={openMenu}>
             <Image

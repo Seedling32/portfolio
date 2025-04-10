@@ -1,5 +1,5 @@
-import { assets, workData } from '@/assets/assets';
-import Image from 'next/image';
+import { workData } from '@/assets/assets';
+import { Send } from 'lucide-react';
 
 const Projects = () => {
   return (
@@ -28,12 +28,7 @@ const Projects = () => {
                 <p className="text-sm">{project.description}</p>
               </div>
               <div className="rounded-md group-hover:border p-1 group-hover:shadow-[2px_2px_5px_#333] duration-300">
-                <Image
-                  src={assets.send_icon}
-                  alt="Send icon."
-                  width={16}
-                  height={16}
-                />
+                <Send />
               </div>
             </div>
           </div>

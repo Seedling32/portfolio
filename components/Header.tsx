@@ -1,11 +1,17 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'motion/react';
+import { ArrowRight, Download } from 'lucide-react';
 
 const Header = () => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center gap-4 pt-40">
-      <div>
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+      >
         <Image
           src={assets.profile_img}
           alt="David Graham"
@@ -13,13 +19,18 @@ const Header = () => {
           width={200}
           height={200}
         />
-      </div>
+      </motion.div>
       <h1 className="text-xl md:text-2xl mb-3 font-Ovo">
         Hi! I&apos;m David Graham
       </h1>
-      <h2 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
+      <motion.h2
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
+      >
         Aspiring full-stack developer in Asheville, NC
-      </h2>
+      </motion.h2>
       <p className="max-w-2xl font-Ovo">
         Showcasing my work in web development, design, and creative projects —
         explore my latest builds, case studies, and passion projects.
@@ -30,12 +41,7 @@ const Header = () => {
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-foreground text-background"
         >
           Contact me
-          <Image
-            src={assets.right_arrow_white}
-            alt="Arrow icon."
-            height={16}
-            width={16}
-          />
+          <ArrowRight />
         </Link>
         <Link
           target="_blank"
@@ -44,12 +50,7 @@ const Header = () => {
           className="px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2"
         >
           Download CV
-          <Image
-            src={assets.download_icon}
-            alt="Download icon."
-            width={16}
-            height={16}
-          />
+          <Download />
         </Link>
       </div>
     </div>
