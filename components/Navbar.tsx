@@ -7,7 +7,12 @@ import { useEffect, useRef, useState } from 'react';
 
 const navList = ['home', 'about', 'projects', 'contact'];
 
-const Navbar = () => {
+type NavbarProps = {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
   const sideMenuRef = useRef<HTMLUListElement>(null);
   const [isScroll, setIsScroll] = useState(false);
 
@@ -16,6 +21,7 @@ const Navbar = () => {
       sideMenuRef.current.style.transform = 'translateX(-16rem)';
     }
   };
+
   const closeMenu = () => {
     if (sideMenuRef.current) {
       sideMenuRef.current.style.transform = 'translateX(16rem)';
@@ -38,7 +44,7 @@ const Navbar = () => {
         <Image
           src={assets.header_bg_color}
           alt="Colorful display."
-          className="fixed top-0 right-0 w-full -z-10 translate-y-[-80%]"
+          className="fixed top-0 right-0 w-full -z-10 translate-y-[-80%] dark:hidden"
         />
       </div>
       <nav className="w-full fixed flex justify-between items-center py-4 px-8">
@@ -62,9 +68,9 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="flex gap-4 ml-8">
-          <button>
+          <button onClick={() => setIsDarkMode((prev) => !prev)}>
             <Image
-              src={assets.moon_icon}
+              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
               alt="Moon icon."
               width={20}
               height={20}
@@ -72,7 +78,7 @@ const Navbar = () => {
           </button>
           <Link
             href="#contact"
-            className="hidden md:flex items-center gap-3 px-10 py-2 border border-gray-500 rounded-full bg-background/50"
+            className="hidden md:flex items-center gap-3 px-10 py-2 border border-gray-500 rounded-full bg-foreground text-background"
           >
             Contact
             <Image
