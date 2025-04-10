@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { toast } from 'sonner';
 
-const Contact = () => {
+const Contact = ({ isDarkMode }: { isDarkMode: boolean }) => {
   const [result, setResult] = useState('');
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full px-10 py-10 scroll-mt-24 bg-[url(/footer-bg-color.png)] bg-no-repeat bg-center bg-[length:90%_auto]"
+      className="w-full px-10 py-10 scroll-mt-24 bg-[url(/footer-bg-color.png)] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-radial from-white/10 to-transparent"
     >
       <h2 className="text-center text-lg font-Ovo">Connect with me</h2>
       <h3 className="text-center text-5xl font-Ovo">Send a message</h3>
@@ -56,7 +56,7 @@ const Contact = () => {
             name="name"
             placeholder="Enter your name..."
             required
-            className="p-3 outline-none border border-gray-500 rounded-md bg-background focus:bg-amber-200/20"
+            className="p-3 outline-none border border-gray-500 rounded-md bg-background focus:bg-amber-200/20 dark:focus:bg-muted-foreground dark:focus:text-black"
           />
           <label htmlFor="email">Email</label>
           <input
@@ -65,7 +65,7 @@ const Contact = () => {
             name="email"
             placeholder="Enter your email..."
             required
-            className="p-3 outline-none border border-gray-500 rounded-md bg-background focus:bg-amber-200/20"
+            className="p-3 outline-none border border-gray-500 rounded-md bg-background focus:bg-amber-200/20 dark:focus:bg-muted-foreground dark:focus:text-black"
           />
         </div>
         <label htmlFor="message">Message</label>
@@ -75,15 +75,15 @@ const Contact = () => {
           rows={6}
           placeholder="Enter your message..."
           required
-          className="w-full p-3 outline-none border border-gray-500 rounded-md bg-background mb-6 focus:bg-amber-200/20"
+          className="w-full p-3 outline-none border border-gray-500 rounded-md bg-background mb-6 focus:bg-amber-200/20 dark:focus:bg-muted-foreground dark:focus:text-black"
         ></textarea>
         <button
           type="submit"
-          className="flex items-center gap-2 bg-foreground text-background px-5 py-3 rounded-full hover:shadow-[4px_4px_10px_#333] duration-300 cursor-pointer"
+          className="flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-full hover:shadow-[4px_4px_10px_#333] duration-300 cursor-pointer hover:-translate-y-1 border"
         >
           {result === '' ? 'Send message' : result}
           <Image
-            src={assets.right_arrow_white}
+            src={isDarkMode ? assets.right_arrow : assets.right_arrow_white}
             alt="Right arrow."
             width={20}
             height={20}
