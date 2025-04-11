@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="w-full min-h-screen px-10 py-10 scroll-mt-24 mt-50"
+      className="w-full min-h-screen p-10 scroll-mt-24 flex flex-col justify-center"
     >
       <h2 className="text-center text-lg font-Ovo">My portfolio</h2>
       <h3 className="text-center text-5xl font-Ovo">My latest work</h3>

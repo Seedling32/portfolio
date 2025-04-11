@@ -6,7 +6,7 @@ import { ArrowRight, Download } from 'lucide-react';
 
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center gap-4 pt-40">
+    <div className="w-11/12 max-w-3xl text-center mx-auto min-h-screen flex flex-col items-center justify-center gap-4">
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -20,17 +20,17 @@ const Header = () => {
           height={200}
         />
       </motion.div>
-      <h1 className="text-xl md:text-2xl mb-3 font-Ovo">
-        Hi! I&apos;m David Graham
-      </h1>
-      <motion.h2
+      <motion.h1
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
+        className="text-xl md:text-2xl mb-3 font-Ovo"
       >
+        Hi! I&apos;m David Graham
+      </motion.h1>
+      <h2 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
         Aspiring full-stack developer in Asheville, NC
-      </motion.h2>
+      </h2>
       <p className="max-w-2xl font-Ovo">
         Showcasing my work in web development, design, and creative projects —
         explore my latest builds, case studies, and passion projects.

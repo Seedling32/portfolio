@@ -6,7 +6,11 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
     <div className="mt-50 items-center">
       <div className="mb-8 flex flex-col items-center">
-        <Image src={assets.logo} alt="David Graham name logo." width={150} />
+        <Image
+          src={isDarkMode ? assets.logo_dark : assets.logo}
+          alt="David Graham name logo."
+          width={150}
+        />
         <div className="flex items-center gap-2">
           <Image src={assets.mail_icon} alt="Email icon." width={30} />
           <span>Email address here</span>
@@ -14,7 +18,7 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
       </div>
       <div className="flex justify-between p-6 items-center max-w-7xl mx-auto border-t border-gray-400">
         <p>&copy; 2025 David Graham. All rights reserved.</p>
-        <ul className="flex gap-6">
+        <ul className="flex items-center gap-6">
           <li>
             <Link href="https://github.com/Seedling32" target="_blank">
               <Image

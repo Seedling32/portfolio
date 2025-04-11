@@ -53,8 +53,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
           <Image
             src={assets.logo_brand}
             alt="David Graham logo."
-            width={100}
-            className="rounded-lg"
+            className="rounded-lg w-14 md:w-20"
           />
         </Link>
         <ul

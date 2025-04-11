@@ -1,14 +1,20 @@
 import { assets, infoList, toolsData } from '@/assets/assets';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 
 const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
       id="about"
-      className="min-h-screen w-full px-[12%] py-10 scroll-mt-24 mb-20"
+      className="min-h-screen w-full px-10 py-10 scroll-mt-24 flex flex-col justify-center"
     >
-      <h2 className="text-center text-lg font-Ovo mb-2">Introduction</h2>
-      <h3 className="text-center text-5xl font-Ovo">About me</h3>
+      <div>
+        <h2 className="text-center text-lg font-Ovo mb-2">Introduction</h2>
+        <h3 className="text-center text-5xl font-Ovo">About me</h3>
+      </div>
       <div className="flex flex-col lg:flex-row items-center gap-20 my-20">
         <div className="w-64 sm:w-80 rounded-3xl">
           <Image
@@ -60,7 +66,7 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
