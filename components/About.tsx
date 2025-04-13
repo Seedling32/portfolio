@@ -9,7 +9,7 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}
       id="about"
-      className="min-h-screen w-full px-10 py-10 scroll-mt-24 flex flex-col justify-center"
+      className="scroll-mt-24 min-h-screen flex flex-col justify-center max-w-5xl mx-auto dark:bg-radial from-white/5 to-transparent"
     >
       <div>
         <h2 className="text-center text-lg font-Ovo mb-2">Introduction</h2>

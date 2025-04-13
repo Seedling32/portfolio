@@ -22,9 +22,9 @@ const Projects = () => {
             href={project.url}
             key={index}
             style={{ backgroundImage: `url(${project.bgImage})` }}
-            className="aspect-square bg-no-repeat bg-center bg-cover relative group rounded-md"
+            className="aspect-square bg-no-repeat bg-center bg-cover relative group rounded-md shadow-[2px_2px_5px_#333] dark:shadow-none"
           >
-            <div className="absolute bottom-5 left-[12%] w-[75%] flex justify-between items-center bg-background/80 px-2 rounded-md group-hover:bottom-7 duration-500">
+            <div className="absolute bottom-5 left-[12%] w-[75%] flex justify-between items-center bg-chart-4 px-2 rounded-md group-hover:bottom-7 duration-500">
               <div>
                 <h4 className="font-semibold">{project.title}</h4>
                 <p className="text-sm">{project.description}</p>
