@@ -1,5 +1,6 @@
 import { workData } from '@/assets/assets';
 import { Send } from 'lucide-react';
+import Link from 'next/link';
 
 const Projects = () => {
   return (
@@ -17,10 +18,11 @@ const Projects = () => {
       </p>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5">
         {workData.map((project, index) => (
-          <div
+          <Link
+            href={`/`}
             key={index}
             style={{ backgroundImage: `url(${project.bgImage})` }}
-            className="aspect-square bg-no-repeat bg-center bg-cover relative group"
+            className="aspect-square bg-no-repeat bg-center bg-cover relative group -z-10"
           >
             <div className="absolute bottom-5 left-[12%] w-[75%] flex justify-between items-center bg-background/80 px-2 rounded-md group-hover:bottom-7 duration-500">
               <div>
@@ -31,7 +33,7 @@ const Projects = () => {
                 <Send />
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
