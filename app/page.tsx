@@ -32,6 +32,7 @@ export default function Home() {
       localStorage.theme = 'light';
     }
   }, [isDarkMode]);
+
   return (
     <div>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />

@@ -19,10 +19,10 @@ const Projects = () => {
       <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5">
         {workData.map((project, index) => (
           <Link
-            href={`/`}
+            href={project.url}
             key={index}
             style={{ backgroundImage: `url(${project.bgImage})` }}
-            className="aspect-square bg-no-repeat bg-center bg-cover relative group -z-10"
+            className="aspect-square bg-no-repeat bg-center bg-cover relative group rounded-md"
           >
             <div className="absolute bottom-5 left-[12%] w-[75%] flex justify-between items-center bg-background/80 px-2 rounded-md group-hover:bottom-7 duration-500">
               <div>

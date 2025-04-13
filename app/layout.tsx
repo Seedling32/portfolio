@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
+import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from '@/lib/constants';
+
 export const metadata: Metadata = {
-  title: 'David Graham | Portfolio',
-  description:
-    'Showcasing my work in web development, design, and creative projects — explore my latest builds, case studies, and passion projects.',
+  title: {
+    template: 'David Graham | %s',
+    default: APP_NAME,
+  },
+  description: APP_DESCRIPTION,
+  metadataBase: new URL(SERVER_URL),
 };
 
 export default function RootLayout({

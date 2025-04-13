@@ -48,7 +48,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
           className="fixed top-0 right-0 w-full -z-10 translate-y-[-80%] dark:hidden"
         />
       </div>
-      <nav className="w-full fixed flex justify-between items-center py-4 px-8">
+      <nav className="w-full fixed flex justify-between items-center py-4 px-8 z-20">
         <Link href="#top">
           <Image
             src={assets.logo_brand}
@@ -63,7 +63,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
         >
           {navList.map((link) => (
             <li key={link}>
-              <Link href={`#${link}`}>{link}</Link>
+              <Link href={`/#${link}`}>{link}</Link>
             </li>
           ))}
         </ul>

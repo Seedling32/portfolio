@@ -88,22 +88,26 @@ export const assets = {
 
 export const workData = [
   {
-    title: 'Frontend project',
-    description: 'Web Design',
+    title: 'Pedal-Pact',
+    url: '/pedal-pact',
+    description: 'Full stack application',
     bgImage: './work-1.png',
   },
   {
     title: 'Geo based app',
+    url: '/',
     description: 'Mobile App',
     bgImage: './work-2.png',
   },
   {
     title: 'Photography site',
+    url: '/',
     description: 'Web Design',
     bgImage: './work-3.png',
   },
   {
     title: 'UI/UX designing',
+    url: '/',
     description: 'UI/UX Design',
     bgImage: './work-4.png',
   },
