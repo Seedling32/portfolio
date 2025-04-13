@@ -77,7 +77,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
             />
           </button>
           <Link
-            href="#contact"
+            href="/#contact"
             className="hidden md:flex items-center gap-2 px-3 py-2 border border-gray-500 rounded-full bg-foreground text-background"
           >
             Contact

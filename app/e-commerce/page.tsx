@@ -4,11 +4,11 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-const PedalPactPage = () => {
+const ECommercePage = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -37,22 +37,22 @@ const PedalPactPage = () => {
     <div className="min-h-screen flex flex-col justify-between">
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <div className="max-w-5xl mx-auto px-6 flex flex-col items-center">
-        <h1 className="text-5xl mb-4 text-center">Pedal-Pact</h1>
+        <h1 className="text-5xl mb-4 text-center">Modern E-Commerce</h1>
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
           <section className="mb-6">
             <h2>Description:</h2>
             <p>
-              Pedal Pact is a full stack application built with Next.js,
-              tailwind, Zod, Neon, Prisma, and Auth JS. A community-driven app
-              for sharing bike routes, organizing group rides, and connecting
-              cyclists in the Asheville, NC area. Still under development, but
-              you may log in with &apos;steve@example.com&apos; password
+              This modern E-Commerce application is a full stack application
+              built with Next.js, tailwind, Zod, Neon, Prisma, and Auth JS. It
+              offers customized views based on user status and allows for mock
+              payment/ordering to test functionality. Still under development,
+              but you may log in with &apos;steve@example.com&apos; password
               &apos;123456&apos; or you may register a new user.
             </p>
             <p className="text-center">
               <Link
-                href="https://github.com/Seedling32/capstone"
+                href="https://github.com/Seedling32/e-commerce"
                 target="_blank"
               >
                 <Badge variant="secondary"> View Github</Badge>
@@ -60,14 +60,14 @@ const PedalPactPage = () => {
             </p>
           </section>
           <Link
-            href="https://www.pedal-pact.com/"
+            href="https://e-commerce-nine-kappa-38.vercel.app/"
             target="_blank"
             className="col-span-2"
           >
             <Card className="p-6">
               <Image
-                src="/work-1.png"
-                alt="Pedal pact website."
+                src="/work-2.png"
+                alt="E commerce website."
                 width={600}
                 height={400}
                 className="rounded-lg"
@@ -81,4 +81,4 @@ const PedalPactPage = () => {
   );
 };
 
-export default PedalPactPage;
+export default ECommercePage;
