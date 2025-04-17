@@ -40,8 +40,18 @@ import github_black from './github-mark.svg';
 import github_white from './github-mark-white.svg';
 import in_black from './InBug-Black.png';
 import in_white from './InBug-White.png';
+import css from './css.png';
+import javaScript from './javascript.png';
+import next from './nextjs.png';
+import php from './php2.png';
+import html from './html.png';
+import node from './node.png';
+import react from './react.png';
+import sql from './sql.png';
+import prisma from './prisma-3.svg';
 
 export const assets = {
+  prisma,
   github_black,
   github_white,
   in_black,
@@ -84,6 +94,14 @@ export const assets = {
   right_arrow_bold,
   right_arrow_bold_dark,
   logo_brand,
+  html,
+  css,
+  react,
+  node,
+  javaScript,
+  php,
+  sql,
+  next,
 };
 
 export const workData = [
@@ -147,26 +165,69 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: 'Languages',
-    description: 'HTML, CSS, JavaScript React Js, Next Js',
+    description: 'HTML, CSS, JavaScript, PHP, SQL',
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: 'Education',
-    description: 'B.Tech in Computer Science',
+    description: 'AAS Software and Web Development',
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
     title: 'Projects',
-    description: 'Built more than 5 projects',
+    description: 'A mix of full stack and client facing applications',
   },
 ];
 
-export const toolsData = [
-  assets.vscode,
-  assets.firebase,
-  assets.mongodb,
-  assets.figma,
-  assets.git,
+export const technologies = [
+  {
+    image: assets.vscode,
+    desc: 'Visual Studio Code',
+  },
+  {
+    image: assets.html,
+    desc: 'HTML 5',
+  },
+  {
+    image: assets.css,
+    desc: 'CSS 3',
+  },
+  {
+    image: assets.javaScript,
+    desc: 'JavaScript',
+  },
+  {
+    image: assets.react,
+    desc: 'React',
+  },
+  {
+    image: assets.node,
+    desc: 'Node.js',
+  },
+  {
+    image: assets.next,
+    desc: 'Next.js',
+  },
+  {
+    image: assets.php,
+    desc: 'PHP',
+  },
+  {
+    image: assets.sql,
+    desc: 'MySQL',
+  },
+  {
+    image: assets.figma,
+    desc: 'Figma',
+  },
+  {
+    image: assets.github_black,
+    desc: 'GitHub',
+  },
+  {
+    image: assets.prisma,
+    desc: 'Prisma',
+  },
 ];
