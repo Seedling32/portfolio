@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { assets } from '@/assets/assets';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 const navList = ['home', 'about', 'projects', 'contact'];
@@ -14,20 +14,11 @@ type NavbarProps = {
 };
 
 const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
-  const sideMenuRef = useRef<HTMLUListElement>(null);
   const [isScroll, setIsScroll] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const openMenu = () => {
-    if (sideMenuRef.current) {
-      sideMenuRef.current.style.transform = 'translateX(-16rem)';
-    }
-  };
-
-  const closeMenu = () => {
-    if (sideMenuRef.current) {
-      sideMenuRef.current.style.transform = 'translateX(16rem)';
-    }
-  };
+  const openMenu = () => setIsMenuOpen(true);
+  const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -40,7 +31,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
   }, []);
 
   return (
-    <>
+    <div>
       <div>
         <Image
           src={assets.header_bg_color}
@@ -97,8 +88,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
         {/* Mobile menu */}
 
         <ul
-          ref={sideMenuRef}
-          className="flex min-h-screen md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 bg-accent transition duration-500 capitalize"
+          className={`fixed right-0 top-0 bottom-0 w-64 min-h-screen md:hidden flex flex-col gap-4 py-20 px-10 z-50 bg-accent transition-transform duration-500 capitalize transform ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
@@ -118,7 +110,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
           ))}
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 
