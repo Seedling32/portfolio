@@ -15,13 +15,13 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}
       id="about"
-      className="scroll-mt-24 min-h-screen flex flex-col justify-center max-w-5xl mx-auto px-4 dark:bg-radial from-white/5 to-transparent"
+      className="scroll-mt-24 min-h-screen flex flex-col justify-center max-w-5xl mx-auto px-10 dark:bg-radial from-white/5 to-transparent"
     >
       <div>
         <h2 className="text-center text-lg font-Ovo mb-2">Introduction</h2>
         <h3 className="text-center text-5xl font-Ovo">About me</h3>
       </div>
-      <div className="flex flex-col lg:flex-row items-center gap-20 my-20">
+      <div className="flex flex-col lg:flex-row items-center gap-10 my-20">
         <div className="w-64 sm:w-80 rounded-3xl">
           <Image
             src={assets.user_image}
