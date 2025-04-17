@@ -45,11 +45,6 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
             front-end and back-end technologies, UI design, and building
             responsive, user-focused applications.
           </p>
-          <p className="mb-10 font-Ovo">
-            My work includes a mix of full-stack web apps and clean, responsive
-            front-end projects like this portfolio—balancing functionality with
-            design.
-          </p>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li

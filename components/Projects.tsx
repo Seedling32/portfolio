@@ -18,11 +18,10 @@ const Projects = () => {
     >
       <h2 className="text-center text-lg font-Ovo">My portfolio</h2>
       <h3 className="text-center text-5xl font-Ovo">My latest work</h3>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quae
-        dignissimos dolorem inventore consequuntur, quod sint sapiente ullam
-        illo iusto. Sint provident, distinctio eos dicta repudiandae esse quasi
-        illo! Quidem.
+      <p className="font-Ovo">
+        My work includes a mix of full-stack web apps and clean, responsive
+        front-end projects like this portfolio—balancing functionality with
+        design.
       </p>
       <div className="grid grid-cols-2 my-10 gap-4">
         {workData.map((project, index) => (
@@ -33,10 +32,12 @@ const Projects = () => {
                 {project.description}
               </CardDescription>
             </CardHeader>
-            <CardContent
-              style={{ backgroundImage: `url(${project.bgImage})` }}
-              className="bg-cover bg-no-repeat bg-center aspect-square rounded-[0_0_12px_12px]"
-            ></CardContent>
+            <Link href={project.url}>
+              <CardContent
+                style={{ backgroundImage: `url(${project.bgImage})` }}
+                className="bg-cover bg-no-repeat bg-center aspect-square rounded-[0_0_12px_12px]"
+              ></CardContent>
+            </Link>
           </Card>
         ))}
       </div>
