@@ -1,7 +1,5 @@
 import { workData } from '@/assets/assets';
-import { Send } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   Card,
   CardContent,
