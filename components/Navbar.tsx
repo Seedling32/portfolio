@@ -39,7 +39,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
           className="fixed top-0 right-0 w-full -z-10 translate-y-[-80%] dark:hidden"
         />
       </div>
-      <nav className="w-full fixed flex justify-between items-center py-4 px-8 z-20">
+      <nav className="fixed top-0 left-0 right-0 w-full max-w-screen flex justify-between items-center py-4 px-8 z-50">
         <Link href="#top">
           <Image
             src={assets.logo_brand}
@@ -48,8 +48,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
           />
         </Link>
         <ul
-          className={`font-Ovo capitalize hidden md:flex gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm bg-background/50 ml-20 ${
-            isScroll ? `backdrop-blur-lg` : ``
+          className={` hidden md:flex font-Ovo capitalize gap-6 lg:gap-8 rounded-full px-6 py-3 shadow-sm bg-background/50 max-w-full overflow-hidden ${
+            isScroll ? `backdrop-blur-sm` : ``
           }`}
         >
           {navList.map((link) => (
