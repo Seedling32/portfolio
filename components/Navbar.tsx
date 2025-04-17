@@ -89,7 +89,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
 
         <ul
           className={`fixed right-0 top-0 bottom-0 w-64 min-h-screen md:hidden flex flex-col gap-4 py-20 px-10 z-50 bg-accent transition-transform duration-500 capitalize transform ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            isMenuOpen ? 'translate-x-[0]' : 'translate-x-full'
           }`}
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
