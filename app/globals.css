@@ -16,7 +16,7 @@
   --shadow-white: 4px 4px 0 #eee;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
