@@ -26,10 +26,7 @@ const Projects = () => {
       </p>
       <div className="grid grid-cols-2 my-10 gap-4">
         {workData.map((project, index) => (
-          <Card
-            key={index}
-            className="max-w-[500px] pb-0 group drop-shadow-black"
-          >
+          <Card key={index} className="max-w-[500px] pb-0 group">
             <CardHeader>
               <CardTitle className="text-center">{project.title}</CardTitle>
               <CardDescription className="text-center">
