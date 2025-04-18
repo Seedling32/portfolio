@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from '@/lib/constants';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
   title: {
@@ -18,9 +19,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`antialiased font-Outfit leading-8 overflow-x-hidden`}>
-        <main>{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main>{children}</main>
+        </ThemeProvider>
         <Toaster position="top-center" richColors />
       </body>
     </html>

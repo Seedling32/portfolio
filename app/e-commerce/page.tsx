@@ -1,41 +1,16 @@
 'use client';
 
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import Nav from '@/components/header/index';
 
 const ECommercePage = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('prefers-color-scheme: dark').matches)
-    ) {
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
-    }
-  }, [isDarkMode]);
-
   return (
     <div className="min-h-screen flex flex-col justify-between">
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Nav />
       <div className="max-w-5xl mx-auto px-6 flex flex-col items-center">
         <h1 className="text-5xl mb-4 text-center">Modern E-Commerce</h1>
 
@@ -76,7 +51,7 @@ const ECommercePage = () => {
           </Link>
         </div>
       </div>
-      <Footer isDarkMode={isDarkMode} />
+      <Footer />
     </div>
   );
 };

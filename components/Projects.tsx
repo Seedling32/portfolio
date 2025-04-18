@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="max-w-6xl mx-auto min-h-screen p-10 scroll-mt-24 grid grid-cols-1"
+      className="max-w-5xl mx-auto min-h-screen p-10 scroll-mt-24 grid grid-cols-1"
     >
       <h2 className="text-center text-lg font-Ovo">My portfolio</h2>
       <h3 className="text-center text-5xl font-Ovo">My latest work</h3>

@@ -1,7 +1,9 @@
+'use client';
+
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 
 const Header = () => {

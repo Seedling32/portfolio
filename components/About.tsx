@@ -1,5 +1,4 @@
 import { assets, infoList, technologies } from '@/assets/assets';
-import { motion } from 'motion/react';
 import Image from 'next/image';
 import {
   Tooltip,
@@ -7,13 +6,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from './ui/tooltip';
+import { BriefcaseBusiness, Code, GraduationCap } from 'lucide-react';
 
-const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
+const About = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.2 }}
+    <div
       id="about"
       className="scroll-mt-24 min-h-screen flex flex-col justify-center max-w-5xl mx-auto px-10 dark:bg-radial from-white/5 to-transparent"
     >
@@ -46,12 +43,18 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
             responsive, user-focused applications.
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
+            {infoList.map(({ title, description }, index) => (
               <li
                 key={index}
                 className="border-[0.5px] border-gray-500 rounded-xl p-6 hover:-translate-y-1 duration-500 hover:shadow-black"
               >
-                <Image src={isDarkMode ? iconDark : icon} alt={title} />
+                {title === 'Languages' ? (
+                  <Code width={60} height={60} />
+                ) : title === 'Education' ? (
+                  <GraduationCap width={60} height={60} />
+                ) : (
+                  <BriefcaseBusiness width={60} height={60} />
+                )}
                 <h4 className="my-4 font-semibold text-gray-700 dark:text-muted-foreground">
                   {title}
                 </h4>
@@ -65,11 +68,12 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
               <TooltipProvider key={index}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <div className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-500 rounded-lg hover:-translate-y-1 duration-500 bg-white/30">
+                    <div className="flex items-center justify-center w-12 md:w-20 aspect-square border border-gray-500 rounded-lg hover:-translate-y-1 duration-500 bg-white/30">
                       <Image
                         src={tool.image}
                         alt="Tool."
-                        className="w-5 sm:w-7"
+                        width={60}
+                        height={60}
                       />
                     </div>
                   </TooltipTrigger>
@@ -85,7 +89,7 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
