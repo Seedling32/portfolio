@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full max-w-5xl p-10 scroll-mt-24 bg-[url(/footer-bg-color.png)] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-radial from-white/5 to-transparent"
+      className="w-full max-w-5xl mx-auto p-10 scroll-mt-24 bg-[url(/footer-bg-color.png)] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-radial from-white/5 to-transparent"
     >
       <motion.div
         initial={{ y: -100 }}
