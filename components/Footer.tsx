@@ -20,7 +20,12 @@ const Footer = () => {
             {showEmail ? (
               `${email}`
             ) : (
-              <span onClick={() => setShowEmail(true)}>Reveal my email</span>
+              <span
+                onClick={() => setShowEmail(true)}
+                className="hover:underline"
+              >
+                Reveal my email
+              </span>
             )}
           </Link>
         </div>
