@@ -3,18 +3,12 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
+  const [showEmail, setShowEmail] = useState(false);
 
-  useEffect(() => {
-    const user = 'david';
-    const domain = 'davidrgraham.com';
-    setEmail(`${user}@${domain}`);
-  }, []);
-
-  if (!email) return null;
+  const email = 'david@davidrgraham.com';
 
   return (
     <div className="mt-50 items-center">
@@ -22,7 +16,13 @@ const Footer = () => {
         <Image src={assets.logo} alt="David Graham name logo." width={150} />
         <div className="flex items-center gap-2">
           <Image src={assets.mail_icon} alt="Email icon." width={30} />
-          <Link href="/#contact">{email}</Link>
+          <Link href="/#contact">
+            {showEmail ? (
+              `${email}`
+            ) : (
+              <span onClick={() => setShowEmail(true)}>Reveal my email</span>
+            )}
+          </Link>
         </div>
       </div>
       <div className="flex justify-between p-6 items-center max-w-7xl mx-auto border-t border-gray-400">
