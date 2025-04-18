@@ -18,13 +18,13 @@ const Menu = () => {
         aria-label="Main navigation"
         className="hidden md:flex items-center w-full max-w-s gap-2"
       >
-        <Link href="#about" className="hover:text-primary">
+        <Link href="/#about" className="hover:text-primary">
           About
         </Link>
-        <Link href="#projects" className="hover:text-primary">
+        <Link href="/#projects" className="hover:text-primary">
           Projects
         </Link>
-        <Link href="#contact" className="hover:text-primary">
+        <Link href="/#contact" className="hover:text-primary">
           Contact
         </Link>
         <ModeToggle />
@@ -42,17 +42,17 @@ const Menu = () => {
           <SheetContent className="flex flex-col items-start p-6">
             <SheetTitle>Menu</SheetTitle>
             <SheetClose asChild>
-              <Link href="#about" className="hover:underline">
+              <Link href="/#about" className="hover:underline">
                 About
               </Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href="#projects" className="hover:underline">
+              <Link href="/#projects" className="hover:underline">
                 Projects
               </Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href="#contact" className="hover:underline">
+              <Link href="/#contact" className="hover:underline">
                 Contact
               </Link>
             </SheetClose>

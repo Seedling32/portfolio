@@ -11,7 +11,7 @@ const ECommercePage = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <Nav />
-      <div className="max-w-5xl mx-auto px-6 flex flex-col items-center">
+      <div className="max-w-5xl mx-auto px-6 flex flex-col items-center pt-52">
         <h1 className="text-5xl mb-4 text-center">Modern E-Commerce</h1>
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
