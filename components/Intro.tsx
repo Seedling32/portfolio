@@ -45,15 +45,14 @@ const Intro = () => {
           Contact me
           <ArrowRight />
         </Link>
-        <Link
-          target="_blank"
+        <a
           href="/DavidG_resume.pdf"
           download={true}
           className="px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2"
         >
           Download CV
           <Download />
-        </Link>
+        </a>
       </div>
     </div>
   );
