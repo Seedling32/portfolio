@@ -1,15 +1,15 @@
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import Projects from '@/components/Projects';
 import Nav from '@/components/header/index';
+import Intro from '@/components/Intro';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative max-w-screen">
       <Nav />
-      <Header />
+      <Intro />
       <About />
       <Projects />
       <Contact />

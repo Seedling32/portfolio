@@ -37,20 +37,16 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full max-w-5xl mx-auto p-10 scroll-mt-24 bg-[url(/footer-bg-color.png)] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-radial from-white/5 to-transparent"
+      className="w-11/12 max-w-5xl mx-auto p-10 scroll-mt-24 dark:bg-radial from-white/5 to-transparent"
     >
-      <motion.div
-        initial={{ y: -100 }}
-        whileInView={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div>
         <h2 className="text-center text-lg font-Ovo">Connect with me</h2>
         <h3 className="text-center text-5xl font-Ovo">Send a message</h3>
         <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
           I&apos;d love to hear from you. If you have any questions, comments,
           or feedback please use the form below.
         </p>
-      </motion.div>
+      </div>
       <form
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto flex flex-col items-center"

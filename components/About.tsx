@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="scroll-mt-24 min-h-screen flex flex-col justify-center max-w-5xl mx-auto px-10 dark:bg-radial from-white/5 to-transparent"
+      className="w-11/12 max-w-5xl mx-auto scroll-mt-24 min-h-screen flex flex-col justify-center dark:bg-radial from-white/5 to-transparent"
     >
       <div>
         <h2 className="text-center text-lg font-Ovo mb-2">Introduction</h2>

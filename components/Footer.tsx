@@ -3,7 +3,38 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+
+const ThemedImage = () => {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  let src;
+
+  useEffect(() => {
+    setMounted(true); // ensures this only runs on the client
+  }, []);
+
+  if (!mounted) {
+    return null; // or show a placeholder/spinner
+  }
+
+  switch (resolvedTheme) {
+    case 'light':
+      src = `/logo.png`;
+      break;
+    case 'dark':
+      src = `/logo_dark.png`;
+      break;
+    default:
+      src = `/logo.png`;
+      break;
+  }
+
+  return (
+    <Image src={`${src}`} width={150} height={50} alt="David Graham logo." />
+  );
+};
 
 const Footer = () => {
   const [showEmail, setShowEmail] = useState(false);
@@ -13,7 +44,7 @@ const Footer = () => {
   return (
     <div className="mt-50 items-center">
       <div className="mb-8 flex flex-col items-center">
-        <Image src={assets.logo} alt="David Graham name logo." width={150} />
+        {ThemedImage()}
         <div className="flex items-center gap-2">
           <Image src={assets.mail_icon} alt="Email icon." width={30} />
           <Link href="/#contact">

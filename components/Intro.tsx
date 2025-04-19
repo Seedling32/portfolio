@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 
-const Header = () => {
+const Intro = () => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto min-h-screen flex flex-col items-center justify-center gap-4">
       <motion.div
@@ -59,4 +59,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Intro;
