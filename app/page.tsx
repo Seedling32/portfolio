@@ -7,7 +7,7 @@ import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
-    <div className="relative max-w-screen">
+    <div className="relative max-w-screen overflow-x-hidden">
       <Nav />
       <Intro />
       <About />
