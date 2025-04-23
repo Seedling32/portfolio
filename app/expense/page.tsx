@@ -16,9 +16,11 @@ const ExpenseTrackerPage = () => {
           <section className="mb-6">
             <h2>Description:</h2>
             <p>
-              This simple expense tracker is built using Prisma and Neon as the
-              back-end. CLerk is used for authentication. Sign in with your
-              Google account or create a new user using your email address.
+              This simple expense tracker is built using Next.js, Prisma and
+              Neon as the back-end,and Clerk is used for authentication. Keep
+              track of expenses and stay on budget, or meet that savings goal!
+              Sign in with your Google account or create a new user using your
+              email address.
             </p>
             <p className="text-center">
               <Link

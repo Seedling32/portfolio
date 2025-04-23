@@ -6,10 +6,10 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
-const ThemedImage = () => {
+const ThemedImageLogo = () => {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  let src;
+  let logo;
 
   useEffect(() => {
     setMounted(true); // ensures this only runs on the client
@@ -21,18 +21,76 @@ const ThemedImage = () => {
 
   switch (resolvedTheme) {
     case 'light':
-      src = `/logo.png`;
+      logo = `/logo.png`;
       break;
     case 'dark':
-      src = `/logo_dark.png`;
+      logo = `/logo_dark.png`;
       break;
     default:
-      src = `/logo.png`;
+      logo = `/logo.png`;
       break;
   }
 
   return (
-    <Image src={`${src}`} width={150} height={50} alt="David Graham logo." />
+    <Image src={`${logo}`} width={150} height={50} alt="David Graham logo." />
+  );
+};
+
+const ThemedImageGit = () => {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  let git;
+
+  useEffect(() => {
+    setMounted(true); // ensures this only runs on the client
+  }, []);
+
+  if (!mounted) {
+    return null; // or show a placeholder/spinner
+  }
+
+  switch (resolvedTheme) {
+    case 'light':
+      git = `/github-mark.svg`;
+      break;
+    case 'dark':
+      git = `/github-mark-white.svg`;
+      break;
+    default:
+      git = `/github-mark-white.svg`;
+      break;
+  }
+
+  return <Image src={`${git}`} width={40} height={40} alt="GitHub logo." />;
+};
+
+const ThemedImageLinked = () => {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  let linked;
+
+  useEffect(() => {
+    setMounted(true); // ensures this only runs on the client
+  }, []);
+
+  if (!mounted) {
+    return null; // or show a placeholder/spinner
+  }
+
+  switch (resolvedTheme) {
+    case 'light':
+      linked = `/InBug-Black.png`;
+      break;
+    case 'dark':
+      linked = `/InBug-White.png`;
+      break;
+    default:
+      linked = `/InBug-White.png`;
+      break;
+  }
+
+  return (
+    <Image src={`${linked}`} width={40} height={40} alt="LinkedIn logo." />
   );
 };
 
@@ -44,10 +102,10 @@ const Footer = () => {
   return (
     <div className="mt-50 items-center">
       <div className="mb-8 flex flex-col items-center">
-        {ThemedImage()}
+        {ThemedImageLogo()}
         <div className="flex items-center gap-2">
           <Image src={assets.mail_icon} alt="Email icon." width={30} />
-          <Link href="/#contact">
+          <span>
             {showEmail ? (
               `${email}`
             ) : (
@@ -58,7 +116,7 @@ const Footer = () => {
                 Reveal my email
               </span>
             )}
-          </Link>
+          </span>
         </div>
       </div>
       <div className="flex justify-between p-6 items-center max-w-7xl mx-auto border-t border-gray-400">
@@ -66,7 +124,7 @@ const Footer = () => {
         <ul className="flex items-center gap-6">
           <li>
             <Link href="https://github.com/Seedling32" target="_blank">
-              <Image src={assets.github_black} alt="Github logo." width={40} />
+              {ThemedImageGit()}
             </Link>
           </li>
           <li>
@@ -74,7 +132,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/david--graham/"
               target="_blank"
             >
-              <Image src={assets.in_black} alt="Linkedin logo." width={40} />
+              {ThemedImageLinked()}
             </Link>
           </li>
         </ul>
