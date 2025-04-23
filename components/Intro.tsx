@@ -46,7 +46,7 @@ const Intro = () => {
           <ArrowRight />
         </Link>
         <a
-          href="/DavidG_resume.pdf"
+          href="/david-graham-resume.pdf"
           download={true}
           className="px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2"
         >
