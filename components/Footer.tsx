@@ -97,7 +97,7 @@ const ThemedImageLinked = () => {
 const Footer = () => {
   const [showEmail, setShowEmail] = useState(false);
 
-  const email = 'david@davidrgraham.com';
+  const email = 'david.r.graham32@gmail.com';
 
   return (
     <div className="mt-50 items-center">
