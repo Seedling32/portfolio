@@ -40,8 +40,10 @@ import react from './react.png';
 import sql from './sql.png';
 import prisma from './prisma-3.svg';
 import tailwind from './tailwind.png';
+import david from './david.webp';
 
 export const assets = {
+  david,
   tailwind,
   prisma,
   github_black,

@@ -18,12 +18,13 @@ const About = () => {
         <h2 className="text-center text-lg font-Ovo mb-2">Introduction</h2>
         <h3 className="text-center text-5xl font-Ovo">About me</h3>
       </div>
-      <div className="flex flex-col lg:flex-row items-center gap-10 my-20">
-        <div className="w-64 sm:w-80 rounded-3xl">
+      <div className="flex flex-col lg:flex-row items-center gap-10 mt-20">
+        <div className="self-start rounded-3xl">
           <Image
-            src={assets.user_image}
+            src={assets.david}
             alt="David Graham"
             className="rounded-3xl"
+            width={400}
           />
         </div>
         <div className="flex-1 flex flex-col gap-3">
@@ -62,31 +63,33 @@ const About = () => {
               </li>
             ))}
           </ul>
-          <h4 className="my-6 font-Ovo">Technologies</h4>
-          <div className="flex flex-wrap items-center gap-3 sm:gap-5">
-            {technologies.map((tool, index) => (
-              <TooltipProvider key={index}>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <div className="flex items-center justify-center w-12 md:w-20 aspect-square border border-gray-500 rounded-lg hover:-translate-y-1 duration-500 bg-white/30">
-                      <Image
-                        src={tool.image}
-                        alt="Tool."
-                        width={60}
-                        height={60}
-                      />
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent
-                    className="bg-foreground text-background"
-                    arrowPadding={0}
-                  >
-                    <p>{tool.desc}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            ))}
-          </div>
+        </div>
+      </div>
+      <div className="w-[75%] mx-auto">
+        <h4 className="text-2xl text-center my-6 font-Ovo">Technologies</h4>
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+          {technologies.map((tool, index) => (
+            <TooltipProvider key={index}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="flex items-center justify-center w-12 md:w-20 aspect-square border border-gray-500 rounded-lg hover:-translate-y-1 duration-500 bg-white/30">
+                    <Image
+                      src={tool.image}
+                      alt="Tool."
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent
+                  className="bg-foreground text-background"
+                  arrowPadding={0}
+                >
+                  <p>{tool.desc}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          ))}
         </div>
       </div>
     </div>
