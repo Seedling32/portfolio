@@ -32,16 +32,19 @@ const About = () => {
             As a passionate and driven web developer with a background in
             conservation, arboriculture, and automotive technology, I bring a
             unique blend of creativity, problem-solving, and hands-on experience
-            to every project I take on. I&apos;m currently completing my{' '}
+            to every project I take on. I recently completed my{' '}
             <abbr
               title="Associates in Applied Science"
               className="no-underline"
             >
               AAS
             </abbr>{' '}
-            in Web & Software Development, where I&apos;ve honed my skills in
-            front-end and back-end technologies, UI design, and building
-            responsive, user-focused applications.
+            in Web & Software Development, where I honed my skills in front-end
+            and back-end technologies, UI design, and building responsive,
+            user-focused applications. These days I spend my time polishing the
+            Blue Ridge Community College website as a Web Developer II, while
+            also taking on freelance projects that allow me to explore new
+            technologies and push the boundaries of web development.
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {infoList.map(({ title, description }, index) => (

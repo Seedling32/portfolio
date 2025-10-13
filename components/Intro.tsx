@@ -31,7 +31,7 @@ const Intro = () => {
         Hi! I&apos;m David Graham
       </motion.h1>
       <h2 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
-        Aspiring full-stack developer in Asheville, NC
+        Full-Stack developer in Asheville, NC
       </h2>
       <p className="max-w-2xl font-Ovo">
         Showcasing my work in web development, design, and creative projects —
