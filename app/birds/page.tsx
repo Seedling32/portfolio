@@ -36,7 +36,7 @@ const BirdsPage = () => {
             </p>
           </section>
           <Link
-            href="https://birds.davidrgraham.com/birds/public/"
+            href="https://davidrgraham.com/birds/public/"
             target="_blank"
             className="col-span-2"
           >
