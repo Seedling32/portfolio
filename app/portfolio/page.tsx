@@ -12,19 +12,19 @@ const BirdsPage = () => {
     <div className="min-h-screen flex flex-col justify-between">
       <Nav />
       <div className="max-w-5xl mx-auto px-6 flex flex-col items-center pt-52">
-        <h1 className="text-5xl mb-4 text-center">WNC Birds Database</h1>
+        <h1 className="text-5xl mb-4 text-center">Portfolio Website</h1>
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
           <section className="mb-6">
             <h2>Description:</h2>
             <p>
-              This application features real-time CRUD functionality, enabling
-              seamless addition, editing, and deletion of records. This project
-              demonstrates proficiency in full-stack development, efficient
-              database integration, and user-centric design, ensuring an
-              intuitive and responsive user experience. You may log in as a
-              member as &apos;testMember&apos or an admin as &apos;steve&apos;.
-              Both logins use &apos;t3stP@ssword&apos; as the password.
+              My personal portfolio serves as both a showcase and a project in
+              itself. I designed and built it using Next.js, React, and Tailwind
+              CSS, focusing on clean design, fast performance, and
+              accessibility. It highlights my development work, design approach,
+              and ongoing projects while demonstrating best practices in modern
+              front-end development — from responsive layouts to SEO
+              optimization and smooth page transitions.
             </p>
             <p className="text-center">
               <Link
@@ -36,7 +36,7 @@ const BirdsPage = () => {
             </p>
           </section>
           <Link
-            href="https://davidrgraham.com/birds/public/"
+            href="https://github.com/Seedling32/portfolio"
             target="_blank"
             className="col-span-2"
           >

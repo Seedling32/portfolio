@@ -92,25 +92,25 @@ export const workData = [
   {
     title: 'Pedal-Pact',
     url: '/pedal-pact',
-    description: 'Full stack application',
+    description: 'Full Stack Application',
     bgImage: './work-1.png',
   },
   {
     title: 'E-Commerce',
     url: '/e-commerce',
-    description: 'Full stack application',
+    description: 'Full Stack Application',
     bgImage: './work-2.png',
   },
   {
     title: 'Expense Tracker',
     url: '/expense',
-    description: 'Mobile application',
+    description: 'Modern Web Application',
     bgImage: './work-3.png',
   },
   {
-    title: 'WNC Birds',
-    url: '/birds',
-    description: 'Full stack application',
+    title: 'This Portfolio',
+    url: '/portfolio',
+    description: 'Modern Portfolio Website',
     bgImage: './work-4.png',
   },
 ];

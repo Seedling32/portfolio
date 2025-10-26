@@ -19,7 +19,7 @@ const About = () => {
         <h3 className="text-center text-5xl font-Ovo">About me</h3>
       </div>
       <div className="flex flex-col lg:flex-row items-center gap-10 mt-20">
-        <div className="self-start rounded-3xl">
+        <div className="self-center rounded-3xl">
           <Image
             src={assets.david}
             alt="David Graham"
