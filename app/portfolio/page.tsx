@@ -28,22 +28,18 @@ const BirdsPage = () => {
             </p>
             <p className="text-center">
               <Link
-                href="https://github.com/Seedling32/web250-oop/tree/main/web250-oopdb/asgn11-three-views"
+                href="https://github.com/Seedling32/portfolio"
                 target="_blank"
               >
                 <Badge variant="secondary"> View Github</Badge>
               </Link>
             </p>
           </section>
-          <Link
-            href="https://github.com/Seedling32/portfolio"
-            target="_blank"
-            className="col-span-2"
-          >
+          <Link href="/" className="col-span-2">
             <Card className="p-6">
               <Image
                 src="/work-4.png"
-                alt="WNC birdswebsite."
+                alt="David's Portfolio website."
                 width={600}
                 height={400}
                 className="rounded-lg"

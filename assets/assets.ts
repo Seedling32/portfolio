@@ -108,7 +108,7 @@ export const workData = [
     bgImage: './work-3.png',
   },
   {
-    title: 'This Portfolio',
+    title: 'Portfolio Website',
     url: '/portfolio',
     description: 'Modern Portfolio Website',
     bgImage: './work-4.png',
