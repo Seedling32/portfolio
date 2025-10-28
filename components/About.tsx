@@ -42,10 +42,9 @@ const About = () => {
             in Web & Software Development, where I honed my skills in front-end
             and back-end technologies, UI design, and building responsive,
             user-focused applications.<br></br>These days I spend my time
-            polishing the Blue Ridge Community College website as a Web
-            Developer II, while also taking on freelance projects that allow me
-            to explore new technologies and push the boundaries of web
-            development.
+            polishing the Blue Ridge Community College website as their Website
+            Specialist, while also creating personal projects that allow me to
+            explore new technologies and push the boundaries of web development.
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {infoList.map(({ title, description }, index) => (
