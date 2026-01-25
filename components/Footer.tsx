@@ -120,7 +120,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between p-6 items-center max-w-7xl mx-auto border-t border-gray-400">
-        <p>&copy; 2025 David Graham. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} David Graham. All rights reserved.
+        </p>
         <ul className="flex items-center gap-6">
           <li>
             <Link href="https://github.com/Seedling32" target="_blank">
