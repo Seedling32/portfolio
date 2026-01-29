@@ -10,7 +10,7 @@ const PedalPactPage = () => {
     <div className="min-h-screen flex flex-col justify-between">
       <Nav />
       <div className="max-w-5xl mx-auto px-6 flex flex-col items-center pt-52">
-        <h1 className="text-5xl mb-4 text-center">Pedal-Pact</h1>
+        <h1 className="text-5xl mb-4 text-center">Prostore</h1>
 
         <div className="flex flex-col-reverse">
           <section className="mb-6">
